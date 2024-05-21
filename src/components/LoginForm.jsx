@@ -17,7 +17,7 @@ export function LoginForm () {
     setError('')
     try {
       const result = await loginWithGoogle()
-      if (result) navigate('/')
+      if (result) navigate('/PopixImageEditor/')
     } catch {
       setError('Error al iniciar sesión')
       setLoading(false)
