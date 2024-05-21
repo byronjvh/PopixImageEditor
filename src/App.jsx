@@ -23,13 +23,13 @@ function App () {
           <BrowserRouter>
               <Header />
               <Routes>
-                <Route path='/PopixImageEditor/' element={
+                <Route path='/' element={
                   <EditorContextProvider>
                     <Landing />
                   </EditorContextProvider>
                   }/>
-                <Route path='/PopixImageEditor/signin' element={<Signin />}/>
-                <Route path='/PopixImageEditor/plus' element={<Plus />}/>
+                <Route path='/signin' element={<Signin />}/>
+                <Route path='/plus' element={<Plus />}/>
               </Routes>
           </BrowserRouter>
         </div>

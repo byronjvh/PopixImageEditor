@@ -12,6 +12,6 @@ export default defineConfig({
       exclude: []
     })
   ],
-  base: 'https://byronjvh.github.io/PopixImageEditor/'
+  base: '/PopixImageEditor/'
 
 })
