@@ -16,4 +16,4 @@ technologies and dependencies used in this project:
 * [Canvas](https://developer.mozilla.org/es/docs/Web/API/Canvas_API)
 
 ## Deploy
-* [GitHub pages](https://byronjvh.github.io/popix/)
+* [GitHub pages](https://byronjvh.github.io/PopixImageEditor/)
