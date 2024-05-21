@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.langButton {
+  transform: scaleY(0);
+  transform-origin: left top;
+  transition: transform .2s ease-in-out;
+}
+
+.langButton.open {
+  transform: scaleY(1);
+}
+
+.dropZone {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='24' ry='24' stroke='%2338BDF8FF' stroke-width='6' stroke-dasharray='20' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+  border-radius: 24px;
+}
+
+.dropZone.dragging {
+  background-color: #38BDF82E;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='24' ry='24' stroke='%2338BDF8FF' stroke-width='6' stroke-dasharray='20' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+  border-radius: 24px;
+}
+
+.link_effect {
+  position: relative;
+}
+
+
+.link_effect::before {
+  content: '';
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 2px;
+  background-image: linear-gradient(to right top, #3555c6, #794bc2, #a83cb6, #cc25a3, #e8018a, #f61874, #fd345e, #ff4d49, #ff6f37, #ff9122, #ffb206, #ffd200);
+  transition: transform .2s ease-out;
+}
+
+.link_effect:hover::before {
+  transform: scaleX(1);
+}
+
+.quality-switch {
+  position: relative;
+}
+
+.quality-switch .selected-bg {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #ca8a04;
+  left: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: transform .3s ease-in-out, background-color .3s ease-in-out;
+  z-index: 0;
+}
+
+.quality-switch.HD .selected-bg {
+  background-color: #2563eb;
+  transform: translateX(0%);
+} 
+
+.quality-switch button {
+  position: relative;
+  transition: color .3s ease-in-out;
+}
+
+/* background Animation */
+
+#ebSvDVMzRWZ2_to {
+  animation: ebSvDVMzRWZ2_to__to 9000ms linear infinite normal forwards
+}
+
+@keyframes ebSvDVMzRWZ2_to__to {
+  0% {
+    transform: translate(225px, 186px);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1)
+  }
+
+  33.333333% {
+    transform: translate(116px, 75px);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1)
+  }
+
+  66.666667% {
+    transform: translate(75px, 225px);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1)
+  }
+
+  100% {
+    transform: translate(225px, 186px)
+  }
+}
+
+#ebSvDVMzRWZ3_to {
+  animation: ebSvDVMzRWZ3_to__to 9000ms linear infinite normal forwards
+}
+
+@keyframes ebSvDVMzRWZ3_to__to {
+  0% {
+    transform: translate(75px, 225px);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1)
+  }
+
+  33.333333% {
+    transform: translate(225px, 186px);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1)
+  }
+
+  66.666667% {
+    transform: translate(116px, 75px);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1)
+  }
+
+  100% {
+    transform: translate(75px, 225px)
+  }
+}
+
+#ebSvDVMzRWZ4_to {
+  animation: ebSvDVMzRWZ4_to__to 9000ms linear infinite normal forwards
+}
+
+@keyframes ebSvDVMzRWZ4_to__to {
+  0% {
+    transform: translate(116px, 75px);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1)
+  }
+
+  33.333333% {
+    transform: translate(75px, 225px);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1)
+  }
+
+  66.666667% {
+    transform: translate(225px, 186px);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1)
+  }
+
+  100% {
+    transform: translate(116px, 75px)
+  }
+}
+
+.tooltip {
+  position: absolute;
+}
+
+.tooltip__content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 3px 6px;
+  border-radius: 8px;
+  z-index: 10;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, .1);
+  min-width: 100px;
+}
+
+.tooltip__content::after {
+  content: '';
+  display: none;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.tooltip:hover .tooltip__content, 
+.tooltip:hover .tooltip__content::after, 
+.tooltip:focus .tooltip__content,
+.tooltip:focus .tooltip__content::after  {
+  display: block;
+}
