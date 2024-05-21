@@ -9,7 +9,7 @@ export function Header () {
   return (
     <header className="h-[5svh] flex justify-between items-center font-ubuntu font-medium tracking-wide text-sm px-2">
         <div>
-          <Link to={'/'}>
+          <Link to={'/PopixImageEditor/'}>
             {t('brandName')}
           </Link>
         </div>
@@ -19,7 +19,7 @@ export function Header () {
               <LangButton />
             </li>
             <li>
-              <Link className='link_effect' to={'/plus'}>
+              <Link className='link_effect' to={'/PopixImageEditor/plus'}>
                 {t('plus')}
               </Link>
             </li>
@@ -27,7 +27,7 @@ export function Header () {
               {
                 !user
                   ? (
-                  <Link className='link_effect' to={'/signin'}>
+                  <Link className='link_effect' to={'/PopixImageEditor/signin'}>
                     {t('signin')}
                   </Link>
                     )
