@@ -11,6 +11,7 @@ export default defineConfig({
       include: ['./src/**/*.js', './src/**/*.jsx'],
       exclude: []
     })
-  ]
+  ],
+  base: 'https://byronjvh.github.io/PopixImageEditor/'
 
 })
