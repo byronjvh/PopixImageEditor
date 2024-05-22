@@ -52,33 +52,13 @@ export function Menu () {
 
                 </div>
                 <div className='flex pb-2 gap-2 max-w-full overflow-auto sm:flex-wrap'>
-                    <OptionButton name={MENU_OPTIONS.brightness} onClick={updateOption}>
-                        {t('brightness')}
-                    </OptionButton>
-                    <OptionButton name={MENU_OPTIONS.contrast} onClick={updateOption}>
-                        {t('contrast')}
-                    </OptionButton>
-                    <OptionButton name={MENU_OPTIONS.saturation} onClick={updateOption}>
-                        {t('saturation')}
-                    </OptionButton>
-                    <OptionButton name={MENU_OPTIONS.temperature} onClick={updateOption}>
-                        {t('temperature')}
-                    </OptionButton>
-                    <OptionButton name={MENU_OPTIONS.sharpen} onClick={updateOption}>
-                        {t('sharpen')}
-                    </OptionButton>
-                    <OptionButton name={MENU_OPTIONS.grayscale} onClick={updateOption}>
-                        {t('grayscale')}
-                    </OptionButton>
-                    <OptionButton name={MENU_OPTIONS.noise} onClick={updateOption}>
-                        {t('noise')}
-                    </OptionButton>
-                    <OptionButton name={MENU_OPTIONS.blur} onClick={updateOption}>
-                        {t('blur')}
-                    </OptionButton>
-                    <OptionButton name={MENU_OPTIONS.aberration} onClick={updateOption}>
-                        {t('aberration')}
-                    </OptionButton>
+                    {
+                        Object.keys(FILTERS).map((option, i) => (
+                            <OptionButton className='py-1 px-3' key={i} name={option.toLowerCase()} onClick={updateOption}>
+                                {t(option.toLowerCase())}
+                            </OptionButton>
+                        ))
+                    }
                 </div>
                 <div>
                     <Download />
