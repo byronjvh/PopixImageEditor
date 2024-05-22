@@ -7,7 +7,7 @@ export function Header () {
   const { t } = useTranslation()
   const { user, logout } = useAuth()
   return (
-    <header className="h-[5svh] flex justify-between items-center font-ubuntu font-medium tracking-wide text-sm px-2">
+    <header className="py-2 flex justify-between items-center font-ubuntu font-medium tracking-wide text-sm px-2">
         <div>
           <Link to={'/PopixImageEditor/'}>
             {t('brandName')}
