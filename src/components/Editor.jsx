@@ -27,10 +27,12 @@ export function Editor () {
 
   return (
     <>
-      <canvas
-        ref={canvasRef}
-        className={'rounded-md p-2 bg-cyan-100 border-2 border-cyan-500'}
-      />
+      <div className='max-h-[50svh] flex justify-center rounded-md p-2 bg-cyan-100 border-2 border-cyan-500'>
+        <canvas
+          ref={canvasRef}
+          className='max-h-full max-w-full'
+        />
+      </div>
       <Menu />
     </>
   )
