@@ -7,7 +7,7 @@ const TYPES = {
   success: 'bg-green-100 border-green-500 text-green-950 hover:bg-green-50'
 }
 
-export function OptionButton ({ children, type = 'default', onClick, name, onHold, onLeave }) {
+export function OptionButton ({ className, children, type = 'default', onClick, name, onHold, onLeave }) {
   const [hold, setHold] = useState(false)
   const handleMouseDown = () => {
     if (!onHold || !onLeave) return
@@ -41,7 +41,7 @@ export function OptionButton ({ children, type = 'default', onClick, name, onHol
         onTouchEnd={handleMouseUp}
         name={name}
         onClick={handleClick}
-        className= {`${TYPES[type]} text-nowrap p-2 rounded-md border-2 font-medium capitalize`}>
+        className= {`${TYPES[type]} text-nowrap p-2 rounded-md border-2 font-medium capitalize ${className}`}>
           { children }
       </button>
   )
