@@ -1,6 +1,6 @@
 # Popix Fast and Free Editor
 Fast and free image editor developed with React, Vite and Canvas.
-![Main page]([https://assets.digitalocean.com/articles/alligator/boo.svg](https://github.com/byronjvh/PopixImageEditor/blob/main/src/assets/project1.png?raw=true))
+![Main page](https://github.com/byronjvh/PopixImageEditor/blob/main/src/assets/project1.png?raw=true)
 
 ## Table of contents
 * [General info](#general-info)
